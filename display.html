@@ -5,14 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Second Screen</title>
   <link rel="stylesheet" href="style.css">
+  <script src="app.js"></script> 
 </head>
 <body>
   <div class="container">
     <h1>Welcome!</h1>
     <p id="greeting">Hello, <span id="username"></span>!</p>
-    <a href="index.html">Back to First Screen</a>
-  </div>
+     <a href="index.html">Back to First Screen</a>
 
-  <script src="app.js"></script>
+     <br/>
+     <br/>
+
+    <button onclick="requestCamera()">Open Camera</button>
+   
+    <img id="imageDisplay" alt="Base64 Image" style="max-width: 100%; height: auto;" />
+  </div>
 </body>
 </html>
