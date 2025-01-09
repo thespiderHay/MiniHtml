@@ -37,7 +37,7 @@ function requestCamera() {
 // Listener for messages from the Super App
 document.addEventListener('message', event => {
    alert(event.data)
-  try {
+ /* try {
     const message = JSON.parse(event.data);
     if (message.type === 'photoCaptured') {
      // alert(message.data)
@@ -46,12 +46,13 @@ document.addEventListener('message', event => {
     }
   } catch (error) {
     alert('Error processing message from Super App: ' + error.message);
-  }
+  }*/
 });
 
 window.addEventListener('message', (event) => {
-  const data = JSON.parse(event.data);
+  alert("window >>> "+event.data)
+ /* const data = JSON.parse(event.data);
   const token = data.token;
   console.log('Authorization Token:', token);
-  alert(token)
+  alert(token)*/
 });
