@@ -48,3 +48,10 @@ document.addEventListener('message', event => {
     alert('Error processing message from Super App: ' + error.message);
   }
 });
+
+window.addEventListener('message', (event) => {
+  const data = JSON.parse(event.data);
+  const token = data.token;
+  console.log('Authorization Token:', token);
+  alert(token)
+});
