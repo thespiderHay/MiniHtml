@@ -43,7 +43,7 @@ document.addEventListener("message", (event) => {
       // alert(message.data)
       const imgElement = document.getElementById("imageDisplay");
       imgElement.src = `data:image/jpeg;base64,${message.data}`;
-    } else if (message.type === "photoCaptured") {
+    } else if (message.type === "token") {
       alert("Token : " + message.data);
       const UsernameElement = document.getElementById("username");
       UsernameElement.textContent = message.data;
